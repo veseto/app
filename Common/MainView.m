@@ -33,10 +33,14 @@ KeyboardBar *bar;
 {
     [super viewDidLoad];
     bar = [[KeyboardBar alloc] init];
-    [[bar fields] addObject:[self veselaPaid]];
-    [[bar fields] addObject:[self denizPaid]];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:[self veselaPaid]];
+    [array addObject:[self denizPaid]];
+    [bar setFields:array];
     [self veselaPaid].inputAccessoryView = bar;
     [self denizPaid].inputAccessoryView = bar;
+    bar.index = -1;
+    bar.field = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -153,4 +157,9 @@ KeyboardBar *bar;
     [connector saveDebt:0 :0: 0: 0];
     self.text.text = @"";
 }
+
+- (IBAction) editingDidBegin:(id)sender {
+    bar.field = sender;
+}
+
 @end

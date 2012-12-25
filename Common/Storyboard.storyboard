@@ -373,6 +373,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainView.h"/>
             <relationships>
                 <relationship kind="action" name="calculate:"/>
+                <relationship kind="action" name="editingDidBegin:"/>
                 <relationship kind="action" name="reset:"/>
                 <relationship kind="outlet" name="denizPaid" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="dropDown" candidateClass="DropDown"/>
