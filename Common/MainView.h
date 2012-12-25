@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UITextView *text;
 - (IBAction)calculate:(id)sender;
 - (IBAction)reset:(id)sender;
+- (IBAction) editingDidBegin:(id)sender;
 
 @end
