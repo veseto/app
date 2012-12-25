@@ -16,6 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bedge_grunge_@2X.png"]];
       return YES;
 }
 
