@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DropDown.h"
 
 @interface MainView : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *veselaPaid;
+@property (strong, nonatomic) IBOutlet UITextField *denizPaid;
+@property (strong, nonatomic) IBOutlet DropDown *dropDown;
+@property (strong, nonatomic) IBOutlet UITextView *text;
+- (IBAction)calculate:(id)sender;
+- (IBAction)reset:(id)sender;
 
 @end

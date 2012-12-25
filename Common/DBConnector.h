@@ -10,4 +10,9 @@
 
 @interface DBConnector : NSObject
 
+-(NSManagedObject *) getDebt;
+-(void) saveDebt:(float) bgn: (float) usd: (float) eur: (float) vouchers;
+-(NSArray *) getHistory;
+-(void) saveHistory: (NSDate *) date: (float) vesela: (float) deniz: (NSString *) currency;
+
 @end
