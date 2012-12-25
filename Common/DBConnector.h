@@ -12,7 +12,7 @@
 
 -(NSManagedObject *) getDebt;
 -(void) saveDebt:(float) bgn: (float) usd: (float) eur: (float) vouchers;
--(NSArray *) getHistory;
+-(NSMutableArray *) getHistory;
 -(void) saveHistory: (NSDate *) date: (float) vesela: (float) deniz: (NSString *) currency;
-
+-(void) deleteHistory;
 @end

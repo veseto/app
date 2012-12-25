@@ -39,7 +39,7 @@ DBConnector *connector;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     history = [[NSArray alloc] initWithArray:[connector getHistory]];
-    [_tableView reloadData]; 
+    [_tableView reloadData];    
 }
 
 

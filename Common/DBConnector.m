@@ -50,29 +50,50 @@
     [context save:&error];
 }
 
--(NSArray *) getHistory {
+-(NSMutableArray *) getHistory {
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"History" inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
     NSError *error;
-    NSArray *objects = [context executeFetchRequest:request error:&error];
+    NSMutableArray *objects = [[NSMutableArray alloc] initWithArray:[context executeFetchRequest:request error:&error]];
     return objects;
 }
 
 -(void) saveHistory: (NSDate *) date: (float) vesela: (float) deniz: (NSString *) currency{
+    if (vesela != 0 || deniz != 0) {
+        AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [delegate managedObjectContext];
+        NSError *error;
+        NSManagedObject *settings;
+        settings = [NSEntityDescription insertNewObjectForEntityForName:@"History" inManagedObjectContext:context];
+        [settings setValue:date forKey:@"date"];
+        [settings setValue:[NSNumber numberWithDouble:vesela] forKey:@"vesela"];
+        [settings setValue:[NSNumber numberWithDouble:deniz] forKey:@"deniz"];
+        [settings setValue:currency forKey:@"currency"];
+        
+        [context save:&error];
+        if (error != nil) {
+            NSLog(@"");
+        }
+    }
+}
+
+-(void) deleteHistory {
     AppDelegate *delegate =[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"History" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
     NSError *error;
-    NSManagedObject *settings;
-    settings = [NSEntityDescription insertNewObjectForEntityForName:@"History" inManagedObjectContext:context];
-    [settings setValue:date forKey:@"date"];
-    [settings setValue:[NSNumber numberWithDouble:vesela] forKey:@"vesela"];
-    [settings setValue:[NSNumber numberWithDouble:deniz] forKey:@"deniz"];
-    [settings setValue:currency forKey:@"currency"];
-    
+    NSMutableArray *objects = [[NSMutableArray alloc] initWithArray:[context executeFetchRequest:request error:&error]];
+    for (NSManagedObject * obj in objects) {
+        [context deleteObject:obj];
+    }
     [context save:&error];
 }
+
+
 
 @end
