@@ -52,22 +52,6 @@
                                     <action selector="calculate:" destination="v37-p4-UDN" eventType="touchUpInside" id="wq7-5w-EmJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfD-Ki-zea">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="mO1-JL-UfE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="v37-p4-UDN" eventType="touchUpInside" id="W15-IM-ZBD"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8I-RQ-b3d" customClass="DropDown">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -117,7 +101,6 @@
                             <constraint firstItem="C0w-T9-JQ0" firstAttribute="top" secondItem="ahb-fP-7s7" secondAttribute="top" type="default" id="9iD-rY-6ha"/>
                             <constraint firstItem="Cvb-CC-u6m" firstAttribute="leading" secondItem="gfJ-Xf-GA9" secondAttribute="leading" constant="24" id="AGU-20-N0a"/>
                             <constraint firstAttribute="bottom" secondItem="G8I-RQ-b3d" secondAttribute="bottom" constant="312" id="FXV-Xr-S08"/>
-                            <constraint firstItem="HfD-Ki-zea" firstAttribute="leading" secondItem="e2Q-yd-gBF" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="G6j-k3-SaM"/>
                             <constraint firstItem="Cvb-CC-u6m" firstAttribute="leading" secondItem="RrJ-7C-WLI" secondAttribute="leading" type="default" id="Ka6-Ch-xHN"/>
                             <constraint firstItem="m5o-LT-wT7" firstAttribute="top" secondItem="gfJ-Xf-GA9" secondAttribute="top" type="default" id="Kmg-eg-rv9"/>
                             <constraint firstItem="jDg-gh-RhA" firstAttribute="top" secondItem="gfJ-Xf-GA9" secondAttribute="top" constant="164" id="Kt0-ST-SaI"/>
@@ -128,7 +111,6 @@
                             <constraint firstItem="G8I-RQ-b3d" firstAttribute="top" secondItem="gfJ-Xf-GA9" secondAttribute="top" constant="166" id="QeI-tV-WBr"/>
                             <constraint firstItem="cdn-fp-PbA" firstAttribute="top" secondItem="gfJ-Xf-GA9" secondAttribute="top" constant="165" id="RGt-MI-Lvl"/>
                             <constraint firstItem="m5o-LT-wT7" firstAttribute="trailing" secondItem="gfJ-Xf-GA9" secondAttribute="trailing" type="default" id="URz-p2-FLB"/>
-                            <constraint firstItem="HfD-Ki-zea" firstAttribute="baseline" secondItem="e2Q-yd-gBF" secondAttribute="baseline" type="default" id="Z63-PQ-fM5"/>
                             <constraint firstItem="Cvb-CC-u6m" firstAttribute="top" secondItem="gfJ-Xf-GA9" secondAttribute="top" constant="211" id="c36-F2-xTR"/>
                             <constraint firstItem="6fS-tW-Paf" firstAttribute="leading" secondItem="gfJ-Xf-GA9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c44-8S-7oW"/>
                             <constraint firstAttribute="trailing" secondItem="jDg-gh-RhA" secondAttribute="trailing" constant="13" id="grU-VO-CI1"/>
@@ -171,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="28" y="41"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="xlK-aM-aBD">
             <objects>
-                <viewController id="n6k-i3-aBE" sceneMemberID="viewController">
+                <viewController id="n6k-i3-aBE" customClass="Settings" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suf-o2-rTk">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -184,12 +166,43 @@
                                     <navigationItem title="Settings" id="oe1-Nl-3xz"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atm-It-Aoc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset debt">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetDebt:" destination="n6k-i3-aBE" eventType="touchUpInside" id="fnc-DY-NyC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufC-rZ-Fjy">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear history">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearHistory:" destination="n6k-i3-aBE" eventType="touchUpInside" id="PJS-6Q-yFV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ufC-rZ-Fjy" firstAttribute="top" secondItem="atm-It-Aoc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5wb-gX-oZY"/>
+                            <constraint firstItem="ufC-rZ-Fjy" firstAttribute="leading" secondItem="atm-It-Aoc" secondAttribute="leading" type="default" id="8RY-cQ-R7s"/>
+                            <constraint firstItem="atm-It-Aoc" firstAttribute="top" secondItem="suf-o2-rTk" secondAttribute="top" constant="92" id="JPy-UD-2kx"/>
                             <constraint firstItem="XzX-aR-Yce" firstAttribute="trailing" secondItem="suf-o2-rTk" secondAttribute="trailing" type="default" id="NsD-dP-54e"/>
                             <constraint firstItem="XzX-aR-Yce" firstAttribute="top" secondItem="suf-o2-rTk" secondAttribute="top" type="default" id="ZpU-z4-j8x"/>
+                            <constraint firstItem="ufC-rZ-Fjy" firstAttribute="trailing" secondItem="atm-It-Aoc" secondAttribute="trailing" type="default" id="ag6-zH-Nig"/>
                             <constraint firstItem="XzX-aR-Yce" firstAttribute="leading" secondItem="suf-o2-rTk" secondAttribute="leading" type="default" id="c2L-FN-kYR"/>
+                            <constraint firstItem="atm-It-Aoc" firstAttribute="leading" secondItem="suf-o2-rTk" secondAttribute="leading" constant="136" id="tAA-od-M15"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="4or-hw-L0z"/>
@@ -357,6 +370,12 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="Settings" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
+            <relationships>
+                <relationship kind="action" name="resetDebt:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

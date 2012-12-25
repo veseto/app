@@ -34,6 +34,8 @@
 		F2E56E06167F46BF001DA19F /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2E56E05167F46BF001DA19F /* images.jpeg */; };
 		F2EA4260167C871200E7EE73 /* DBConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA425F167C871200E7EE73 /* DBConnector.m */; };
 		F2EC650D167FA2C6005BCDF4 /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EC650C167FA2C6005BCDF4 /* HistoryView.m */; };
+		F2EE241E168A42170027AA18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EE241D168A42170027AA18 /* Settings.m */; };
+		F2EE2421168A43550027AA18 /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EE2420168A43550027AA18 /* KeyboardBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,10 @@
 		F2EA425F167C871200E7EE73 /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
 		F2EC650B167FA2C6005BCDF4 /* HistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
 		F2EC650C167FA2C6005BCDF4 /* HistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
+		F2EE241C168A42170027AA18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		F2EE241D168A42170027AA18 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		F2EE241F168A43540027AA18 /* KeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardBar.h; sourceTree = "<group>"; };
+		F2EE2420168A43550027AA18 /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +127,8 @@
 		F29DA632166EA0260025E370 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D966293E168A314000FFCA40 /* 0082.png */,
-				D966293F168A314000FFCA40 /* 0082@2x.png */,
-				D9662934168A305C00FFCA40 /* 0087.png */,
-				D9662935168A305C00FFCA40 /* 0087@2x.png */,
-				D9662936168A305C00FFCA40 /* 0097.png */,
-				D9662937168A305C00FFCA40 /* 0097@2x.png */,
-				D966292F168A2AFF00FFCA40 /* bedge_grunge_@2X.png */,
-				D9662930168A2AFF00FFCA40 /* bedge_grunge.png */,
+				F2EE241F168A43540027AA18 /* KeyboardBar.h */,
+				F2EE2420168A43550027AA18 /* KeyboardBar.m */,
 				F2E56DF6167F1FE8001DA19F /* DropDown.h */,
 				F2E56DF7167F1FE8001DA19F /* DropDown.m */,
 				F2E56DF8167F1FE8001DA19F /* PopoverView.h */,
@@ -144,6 +144,8 @@
 				F2EA425F167C871200E7EE73 /* DBConnector.m */,
 				F2EC650B167FA2C6005BCDF4 /* HistoryView.h */,
 				F2EC650C167FA2C6005BCDF4 /* HistoryView.m */,
+				F2EE241C168A42170027AA18 /* Settings.h */,
+				F2EE241D168A42170027AA18 /* Settings.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -151,6 +153,14 @@
 		F29DA633166EA0260025E370 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D966293E168A314000FFCA40 /* 0082.png */,
+				D966293F168A314000FFCA40 /* 0082@2x.png */,
+				D9662934168A305C00FFCA40 /* 0087.png */,
+				D9662935168A305C00FFCA40 /* 0087@2x.png */,
+				D9662936168A305C00FFCA40 /* 0097.png */,
+				D9662937168A305C00FFCA40 /* 0097@2x.png */,
+				D966292F168A2AFF00FFCA40 /* bedge_grunge_@2X.png */,
+				D9662930168A2AFF00FFCA40 /* bedge_grunge.png */,
 				F2E56E05167F46BF001DA19F /* images.jpeg */,
 				F2E56E01167F224D001DA19F /* 0271@2x rotated.png */,
 				F29DA634166EA0260025E370 /* Common-Info.plist */,
@@ -248,6 +258,8 @@
 				F2E56DFA167F1FE8001DA19F /* DropDown.m in Sources */,
 				F2E56DFB167F1FE8001DA19F /* PopoverView.m in Sources */,
 				F2EC650D167FA2C6005BCDF4 /* HistoryView.m in Sources */,
+				F2EE241E168A42170027AA18 /* Settings.m in Sources */,
+				F2EE2421168A43550027AA18 /* KeyboardBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

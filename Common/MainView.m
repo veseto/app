@@ -9,6 +9,7 @@
 #import "MainView.h"
 #import "AppDelegate.h"
 #import "DBConnector.h"
+#import "KeyboardBar.h"
 
 @interface MainView ()
 
@@ -16,6 +17,7 @@
 
 @implementation MainView
 DBConnector * connector;
+KeyboardBar *bar;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +32,14 @@ DBConnector * connector;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    bar = [[KeyboardBar alloc] init];
+    [[bar fields] addObject:[self veselaPaid]];
+    [[bar fields] addObject:[self denizPaid]];
+    [self veselaPaid].inputAccessoryView = bar;
+    [self denizPaid].inputAccessoryView = bar;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     NSMutableArray * currencies = [NSMutableArray arrayWithObjects: @"BGN", @"EUR", @"USD", @"Vouchers", nil];
     [[self dropDown] setStringArray:currencies];
     [[self dropDown] setString:@"BGN"];
@@ -42,7 +52,7 @@ DBConnector * connector;
         float usd = [[matches valueForKey:@"usd"] floatValue];
         float vouchers = [[matches valueForKey:@"vouchers"] floatValue];
         NSString *text = @"";
-
+        
         if (bgn > 0) {
             text = [text stringByAppendingString:[NSString stringWithFormat:@"Весела дължи: %.02f лв.\n", bgn]];
         }else if (bgn < 0) {
@@ -68,6 +78,7 @@ DBConnector * connector;
         
     }
 }
+
 
 - (void)didReceiveMemoryWarning
 {
